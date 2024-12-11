@@ -19,7 +19,7 @@ export class AdminService {
     return this.prisma.admin.create({
       data: {
         ...data,
-        birthDate: formatISO(new Date('2024-12-11')),
+        birthDate: formatISO(new Date(data.birthDate)),
         password: hashedPassword,
       },
     });
